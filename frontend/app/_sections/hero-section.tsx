@@ -8,7 +8,7 @@ import { fadeUpStagger, fadeUpItem, breathe, float } from '../_lib/animations';
 
 export function HeroSection() {
   return (
-    <section className="relative min-h-[70vh] md:min-h-[85vh] flex items-center justify-center overflow-hidden grain-texture">
+    <section className="relative min-h-[60vh] md:min-h-[75vh] flex items-center justify-center overflow-hidden grain-texture">
       {/* Enhanced mesh gradient background */}
       <div className="absolute inset-0 gradient-mesh-hero" />
       
@@ -171,7 +171,7 @@ export function HeroSection() {
         }}
       />
 
-      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-20 z-10">
+      <div className="relative container mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12 z-10">
         <motion.div
           variants={fadeUpStagger}
           initial="hidden"

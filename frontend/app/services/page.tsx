@@ -9,7 +9,7 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen">
       {/* Hero Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-b from-background to-background/50 relative overflow-hidden">
+      <section className="py-12 md:py-16 bg-gradient-to-b from-background to-background/50 relative overflow-hidden">
         {/* Gradient background - lighter on mobile */}
         <div className="absolute inset-0 gradient-purple-soft opacity-10 md:opacity-20 pointer-events-none" />
         

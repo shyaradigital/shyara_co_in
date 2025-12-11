@@ -42,32 +42,11 @@ const services = [
 
 export function ServicesSection() {
   return (
-    <section className="py-16 md:py-24 bg-background relative overflow-hidden">
+    <section className="py-8 md:py-12 bg-background relative overflow-hidden">
       {/* Background pattern - lighter on mobile */}
       <div className="absolute inset-0 gradient-purple-soft opacity-3 md:opacity-5 pointer-events-none" />
       
       <div className="relative container mx-auto px-4 sm:px-6 lg:px-8">
-        <motion.div
-          variants={fadeUpStagger}
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, margin: '-100px' }}
-          className="text-center mb-16"
-        >
-          <motion.h2
-            variants={fadeUpItem}
-            className="text-fluid-3xl md:text-fluid-4xl font-display font-bold text-primary mb-4"
-          >
-            Our Services
-          </motion.h2>
-          <motion.p
-            variants={fadeUpItem}
-            className="text-fluid-base text-muted-foreground max-w-2xl mx-auto"
-          >
-            End-to-end digital solutions tailored to your business needs.
-          </motion.p>
-        </motion.div>
-
         <motion.div
           variants={fadeUpStagger}
           initial="hidden"
