@@ -2,7 +2,6 @@ import { Request, Response, NextFunction } from 'express';
 import { contactSchema } from './contact.schema';
 import { contactService } from './contact.service';
 import { ApiResponse } from '../../common/types';
-import { AppError } from '../../middlewares/errorHandler';
 
 export class ContactController {
   async createContact(req: Request, res: Response, next: NextFunction): Promise<void> {

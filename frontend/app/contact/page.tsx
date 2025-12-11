@@ -85,7 +85,7 @@ export default function ContactPage() {
                 Get in Touch
               </h1>
               <p className="text-fluid-lg text-muted-foreground max-w-2xl mx-auto">
-                Have a question or want to discuss your project? We'd love to hear from you.
+                Have a question or want to discuss your project? We&apos;d love to hear from you.
               </p>
             </motion.div>
 
@@ -101,7 +101,7 @@ export default function ContactPage() {
                   <CardHeader>
                     <CardTitle className="text-fluid-2xl">Send us a Message</CardTitle>
                     <CardDescription>
-                      Fill out the form below and we'll get back to you as soon as possible.
+                      Fill out the form below and we&apos;ll get back to you as soon as possible.
                     </CardDescription>
                   </CardHeader>
                   <CardContent>
@@ -205,7 +205,7 @@ export default function ContactPage() {
                             className="p-4 bg-green-50 border-2 border-green-200 rounded-lg text-green-800 text-sm flex items-center gap-3"
                           >
                             <CheckCircle2 className="w-5 h-5 text-green-600 flex-shrink-0" />
-                            <span>Thank you! Your message has been sent successfully. We'll get back to you soon.</span>
+                            <span>Thank you! Your message has been sent successfully. We&apos;ll get back to you soon.</span>
                           </motion.div>
                         )}
 
