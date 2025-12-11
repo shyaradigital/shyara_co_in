@@ -85,7 +85,7 @@ export function DivisionsSection() {
           viewport={{ once: true, margin: '-100px' }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10"
         >
-          {divisions.map((division, index) => {
+          {divisions.map((division) => {
             const Icon = division.icon;
             return (
               <motion.div

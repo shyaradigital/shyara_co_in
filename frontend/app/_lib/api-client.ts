@@ -1,4 +1,4 @@
-import axios, { AxiosInstance, AxiosError } from 'axios';
+import axios, { AxiosInstance, AxiosError, InternalAxiosRequestConfig } from 'axios';
 
 const API_BASE_URL =
   process.env.NEXT_PUBLIC_API_URL || (typeof window !== 'undefined' ? '/api' : 'http://localhost:4000');
@@ -28,7 +28,7 @@ const createApiClient = (): AxiosInstance => {
       return response;
     },
     async (error: AxiosError) => {
-      const originalRequest = error.config as any;
+      const originalRequest = error.config as InternalAxiosRequestConfig & { _retry?: boolean };
 
       // Retry logic for network errors
       if (error.code === 'ECONNABORTED' || error.code === 'ERR_NETWORK') {

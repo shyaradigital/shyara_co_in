@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '../_components/ui/button';
 import Link from 'next/link';
-import { fadeUp, fadeUpStagger, fadeUpItem } from '../_lib/animations';
+import { fadeUpStagger, fadeUpItem } from '../_lib/animations';
 
 export function CTASection() {
   return (

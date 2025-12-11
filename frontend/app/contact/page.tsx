@@ -9,7 +9,7 @@ import { Label } from '../_components/ui/label';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../_components/ui/card';
 import { submitContactForm, contactSchema, type ContactFormData } from '../_services/contact';
 import { Mail, Phone, MapPin, CheckCircle2 } from 'lucide-react';
-import { fadeUp, slideUp, scaleIn } from '../_lib/animations';
+import { fadeUp, slideUp } from '../_lib/animations';
 
 export default function ContactPage() {
   const [formData, setFormData] = useState<ContactFormData>({
@@ -48,10 +48,11 @@ export default function ContactPage() {
       } else {
         setSubmitStatus('error');
       }
-    } catch (error: any) {
-      if (error.errors) {
+    } catch (error) {
+      if (error && typeof error === 'object' && 'errors' in error) {
         const fieldErrors: Partial<Record<keyof ContactFormData, string>> = {};
-        error.errors.forEach((err: any) => {
+        const zodError = error as { errors: Array<{ path?: (string | number)[]; message: string }> };
+        zodError.errors.forEach((err) => {
           if (err.path) {
             fieldErrors[err.path[0] as keyof ContactFormData] = err.message;
           }

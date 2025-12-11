@@ -71,7 +71,7 @@ export default function AboutPage() {
             viewport={{ once: true, margin: '-100px' }}
             className="max-w-5xl mx-auto space-y-8"
           >
-            {sections.map((section, index) => {
+            {sections.map((section) => {
               const Icon = section.icon;
               return (
                 <motion.div key={section.title} variants={fadeUpItem}>

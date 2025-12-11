@@ -62,7 +62,7 @@ export function WhoIsThisForSection() {
           viewport={{ once: true, margin: '-50px' }}
           className="flex flex-wrap md:flex-nowrap items-center justify-center gap-6 md:gap-8 lg:gap-12 overflow-x-auto pb-4 md:pb-0 scrollbar-hide"
         >
-          {audiences.map((audience, index) => {
+          {audiences.map((audience) => {
             const Icon = audience.icon;
             return (
               <motion.div

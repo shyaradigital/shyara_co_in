@@ -85,7 +85,7 @@ export function AboutSection({ title, description }: AboutSectionProps) {
 
                 {/* Pillars */}
                 <div className="space-y-4 pt-6">
-                  {pillars.map((pillar, index) => {
+                  {pillars.map((pillar) => {
                     const Icon = pillar.icon;
                     return (
                       <div key={pillar.title} className="flex gap-4">

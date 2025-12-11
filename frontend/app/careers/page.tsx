@@ -88,7 +88,7 @@ export default function CareersPage() {
                 { icon: Briefcase, title: 'Growth Opportunities', description: 'Advance your career with us' },
                 { icon: Users, title: 'Great Team', description: 'Work with talented professionals' },
                 { icon: TrendingUp, title: 'Innovation', description: 'Build cutting-edge solutions' },
-              ].map((item, index) => {
+              ].map((item) => {
                 const Icon = item.icon;
                 return (
                   <motion.div key={item.title} variants={fadeUpItem}>

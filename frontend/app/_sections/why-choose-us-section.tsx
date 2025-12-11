@@ -61,7 +61,7 @@ export function WhyChooseUsSection() {
           viewport={{ once: true, margin: '-100px' }}
           className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-10"
         >
-          {pillars.map((pillar, index) => {
+          {pillars.map((pillar) => {
             const Icon = pillar.icon;
             return (
               <motion.div
