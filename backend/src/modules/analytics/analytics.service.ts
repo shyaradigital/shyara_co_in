@@ -1,6 +1,7 @@
 import prisma from '../../config/database';
 import { CreateAnalyticsDto, AnalyticsDto } from './analytics.dto';
 import logger from '../../utils/logger';
+import { Prisma } from '@prisma/client';
 
 export class AnalyticsService {
   async trackPageView(data: CreateAnalyticsDto): Promise<AnalyticsDto> {
@@ -8,8 +9,8 @@ export class AnalyticsService {
       const analytics = await prisma.analytics.create({
         data: {
           page: data.page,
-          device: data.device || null,
-          metadata: data.metadata || null,
+          device: data.device || undefined,
+          metadata: data.metadata ? (data.metadata as Prisma.InputJsonValue) : undefined,
         },
       });
 
