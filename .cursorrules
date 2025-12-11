@@ -1,0 +1,72 @@
+########################################
+##### GLOBAL RULES FOR SHYARA WEBSITE ##
+########################################
+
+# Architecture
+- Project MUST follow root structure:
+  /backend, /frontend, /infrastructure, /docs
+- Backend = NestJS (preferred) or Express + TS.
+- Frontend = Next.js 14 App Router with TypeScript.
+- Every module must follow a clean, modular structure.
+
+# UI/UX
+- Implement premium SaaS-level UI (Linear/Vercel style).
+- Use Tailwind + ShadCN UI everywhere.
+- Fluid typography via clamp().
+- Responsive grid system; no fixed heights.
+- Hero, sections, CTAs must auto-resize for all devices.
+- Apply micro-animations on scroll and hover.
+
+# Performance
+- Use next/image.
+- Optimize LCP and CLS.
+- Lazy load heavy components.
+- All pages SSR with caching/ISR.
+
+# Code Quality
+- TypeScript strict mode.
+- ESLint + Prettier formatting.
+- No unused imports.
+- Reusable components only — never duplicate code.
+- Use hooks for shared logic.
+- Use environment variables for all API calls.
+
+# Frontend Rules
+- Folder structure partitioned into:
+  /app/_components
+  /app/_sections
+  /app/_layouts
+  /app/_lib
+  /app/api (client wrappers)
+- Pages:
+  - Home
+  - About
+  - Services
+  - Contact
+  - Careers (optional)
+- Do NOT implement sub-domain pages here.
+- Each section must be reusable and isolated.
+
+# Backend Rules
+- Use DTOs + Schemas for validation.
+- Modular architecture for each feature.
+- Helmet, CORS, rate limiter must be enabled.
+- Controller → Service → Repository pattern.
+- All endpoints typed with interfaces.
+
+# Responsiveness Requirements
+- Cards stack under 768px.
+- Navigation becomes mobile hamburger.
+- Containers max-width: 1280px.
+- Padding adjusts per breakpoint.
+- Animations stay below 200ms.
+
+# Developer Experience
+- Detailed comments in complex areas.
+- Keep code readable and split into smaller components.
+- Follow consistent naming conventions.
+
+########################################
+######## END OF RULES ##################
+########################################
+
